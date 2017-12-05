@@ -1,0 +1,55 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.5": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.5": []
+  },
+  "packageFolders": {
+    "C:\\Users\\takashi\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
+    "restore": {
+      "projectUniqueName": "C:\\Users\\takashi\\Documents\\Visual Studio 2017\\Projects\\s3hash-net\\aws-sdk-net-v3\\sdk\\src\\Core\\AWSSDK.Core.Net45.csproj",
+      "projectName": "AWSSDK.Core",
+      "projectPath": "C:\\Users\\takashi\\Documents\\Visual Studio 2017\\Projects\\s3hash-net\\aws-sdk-net-v3\\sdk\\src\\Core\\AWSSDK.Core.Net45.csproj",
+      "packagesPath": "C:\\Users\\takashi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\takashi\\Documents\\Visual Studio 2017\\Projects\\s3hash-net\\aws-sdk-net-v3\\sdk\\src\\Core\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\takashi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net45"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net45": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net45": {}
+    }
+  }
+}

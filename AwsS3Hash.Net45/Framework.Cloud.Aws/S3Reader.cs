@@ -5,17 +5,19 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Linq;
 
+using Framework;
+
 using Amazon;
 using Amazon.S3;
 using Amazon.S3.Model;
 
 namespace Framework.Cloud.Aws
 {
-    public class S3Reader : IDisposable
+    public class S3Reader : IReaderCloser, IDisposable
     {
         public string BucketName { get; private set; }
         public string KeyName { get; private set; }
-        public long Length { get; private set; }
+        public long Length { get; set; }
         public int Parallels { get; private set; }
         public int Capacity { get; set; }
         public int RetryRequests { get; set; }

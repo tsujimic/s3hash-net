@@ -110,27 +110,27 @@ namespace AwsS3Hash.Net45
                     if (string.Compare(hashType, "SHA1", true) == 0)
                     {
                         Logger.WriteLine("hash : SHA1");
-                        result = S3Hash.ComputeSHA1(s3);
+                        result = Hash.ComputeSHA1(s3);
                     }
                     else if (string.Compare(hashType, "SHA256", true) == 0)
                     {
                         Logger.WriteLine("hash : SHA256");
-                        result = S3Hash.ComputeSHA256(s3);
+                        result = Hash.ComputeSHA256(s3);
                     }
                     else if (string.Compare(hashType, "SHA384", true) == 0)
                     {
                         Logger.WriteLine("hash : SHA384");
-                        result = S3Hash.ComputeSHA384(s3);
+                        result = Hash.ComputeSHA384(s3);
                     }
                     else if (string.Compare(hashType, "SHA512", true) == 0)
                     {
                         Logger.WriteLine("hash : SHA512");
-                        result = S3Hash.ComputeSHA512(s3);
+                        result = Hash.ComputeSHA512(s3);
                     }
                     else
                     {
                         Logger.WriteLine("hash : MD5");
-                        result = S3Hash.ComputeMD5(s3);
+                        result = Hash.ComputeMD5(s3);
                     }
                 }
 

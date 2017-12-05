@@ -50,7 +50,8 @@
     <Compile Include="Framework.Cloud.Aws\S3Path.cs" />
     <Compile Include="Framework.Cloud.Aws\S3Reader.cs" />
     <Compile Include="Framework.Log\Logger.cs" />
-    <Compile Include="Framework.Security.Hash\S3Hash.cs" />
+    <Compile Include="Framework.Security.Hash\Hash.cs" />
+    <Compile Include="Framework\IReaderCloser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
