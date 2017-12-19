@@ -33,11 +33,17 @@ namespace Framework.Cloud.Aws
                     RegionEndpoint = basicProfile.Region,
                     ReadWriteTimeout = Timeout
                 };
-
                 return new AmazonS3Client(awsCredentials, amazonS3Config);
             }
-
-            return null;
+            else
+            {
+                AmazonS3Config amazonS3Config = new AmazonS3Config()
+                {
+                    RegionEndpoint = RegionEndpoint.GetBySystemName(DefaultRegion),
+                    ReadWriteTimeout = Timeout
+                };
+                return new AmazonS3Client(amazonS3Config);
+            }
         }
 
         public static AmazonS3Client GetInstance(RegionEndpoint region)
@@ -49,8 +55,15 @@ namespace Framework.Cloud.Aws
                 AWSCredentials awsCredentials = AWSCredentialsFactory.GetAWSCredentials(basicProfile, sharedFile);
                 return new AmazonS3Client(awsCredentials, region);
             }
-
-            return null;
+            else
+            {
+                AmazonS3Config amazonS3Config = new AmazonS3Config()
+                {
+                    RegionEndpoint = region,
+                    ReadWriteTimeout = Timeout
+                };
+                return new AmazonS3Client(amazonS3Config);
+            }
         }
 
         public static AmazonS3Client GetInstance(AmazonS3Config config)
@@ -62,8 +75,10 @@ namespace Framework.Cloud.Aws
                 AWSCredentials awsCredentials = AWSCredentialsFactory.GetAWSCredentials(basicProfile, sharedFile);
                 return new AmazonS3Client(awsCredentials, config);
             }
-
-            return null;
+            else
+            {
+                return new AmazonS3Client(config);
+            }
         }
 
         public static AmazonS3Client GetInstance(string bucketName)

@@ -65,7 +65,7 @@ namespace AwsS3Hash.Net45
                 return 1;
             }
 
-            if (showHelp || awsAccessKeyId == null || awsSecretAccessKey == null || filePath == null)
+            if (showHelp || filePath == null)
             {
                 ShowUsage(optionSet);
                 return 1;

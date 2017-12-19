@@ -63,18 +63,6 @@ namespace Framework.Cloud.Aws
             _isOpen = false;
         }
 
-        public S3Reader(string path)
-            : this()
-        {
-            Open(path);
-        }
-
-        public S3Reader(string path, int capacity, int parallels)
-            : this(capacity, parallels)
-        {
-            Open(path);
-        }
-
         public S3Reader(string accessKey, string secretAccessKey, string path)
             : this()
         {
@@ -131,48 +119,8 @@ namespace Framework.Cloud.Aws
             }
         }
 
-        public void Open(string path)
-        {
-            string bucketName, keyName;
-            if (!S3Path.TryParse(path, out bucketName, out keyName))
-                throw new ArgumentException("path");
-            if (string.IsNullOrEmpty(bucketName))
-                throw new ArgumentException("bucketName");
-            if (string.IsNullOrEmpty(keyName))
-                throw new ArgumentException("keyName");
-
-            this.BucketName = bucketName;
-            this.KeyName = keyName;
-
-            _s3Client = S3Client.GetInstance(bucketName);
-
-            GetObjectMetadataResponse getObjectMetadataResponse = getObjectMetadata(_s3Client, bucketName, keyName);
-            this.Length = getObjectMetadataResponse.ContentLength;
-
-            _objectRequests.Clear();
-            _objectRequestToDownload.Clear();
-            _objectPartsCache.Clear();
-
-            S3ObjectRequest[] objectRequests = getObjectRequests(bucketName, keyName, this.Length, this.Capacity);
-            foreach (S3ObjectRequest objectRequest in objectRequests)
-                _objectRequests.Enqueue(objectRequest);
-
-            _isOpen = true;
-            _readBytes = 0;
-
-            startThread();
-
-            _timer = new Timer(timerCallBack, null, Timeout.Infinite, Timeout.Infinite);
-            startTimer();
-        }
-
         public void Open(string accessKey, string secretAccessKey, string path)
         {
-            if (string.IsNullOrEmpty(accessKey))
-                throw new ArgumentException("accessKey");
-            if (string.IsNullOrEmpty(secretAccessKey))
-                throw new ArgumentException("secretAccessKey");
-
             string bucketName, keyName;
             if (!S3Path.TryParse(path, out bucketName, out keyName))
                 throw new ArgumentException("path");
@@ -184,7 +132,10 @@ namespace Framework.Cloud.Aws
             this.BucketName = bucketName;
             this.KeyName = keyName;
 
-            _s3Client = S3Client.GetInstance(accessKey, secretAccessKey, bucketName);
+            if (string.IsNullOrEmpty(accessKey) || string.IsNullOrEmpty(secretAccessKey))
+                _s3Client = S3Client.GetInstance(bucketName);
+            else
+                _s3Client = S3Client.GetInstance(accessKey, secretAccessKey, bucketName);
 
             GetObjectMetadataResponse getObjectMetadataResponse = getObjectMetadata(_s3Client, bucketName, keyName);
             this.Length = getObjectMetadataResponse.ContentLength;
