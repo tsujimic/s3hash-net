@@ -25,6 +25,7 @@ Options:
   -?, --help                 show help.
 ```
 # Usage example
+```
 $ AwsS3Hash.Net45.exe --accesskey XXXXXXXX --secretkey YYYYYYY --path s3://bucket/key
 $ AwsS3Hash.Net45.exe -a XXXXXXXX -s YYYYYYY -p s3://bucket/key
 $ AwsS3Hash.Net45.exe -a XXXXXXXX -s YYYYYYY -p s3://bucket/key --type MD5
@@ -32,5 +33,6 @@ $ AwsS3Hash.Net45.exe -a XXXXXXXX -s YYYYYYY -p s3://bucket/key --type MD5 --log
 $ AwsS3Hash.Net45.exe -p s3://bucket/key
 $ AwsS3Hash.Net45.exe -p s3://bucket/key --type MD5
 $ AwsS3Hash.Net45.exe -p s3://bucket/key --part 10 --parallel 3
+```
 
 
