@@ -1,0 +1,10 @@
+C:\Users\takashi\Documents\Visual Studio 2017\Projects\s3hash-net\aws-sdk-net-v3\sdk\src\Core\bin\Debug\net45\AWSSDK.Core.dll
+C:\Users\takashi\Documents\Visual Studio 2017\Projects\s3hash-net\aws-sdk-net-v3\sdk\src\Core\bin\Debug\net45\AWSSDK.Core.pdb
+C:\Users\takashi\Documents\Visual Studio 2017\Projects\s3hash-net\aws-sdk-net-v3\sdk\src\Core\bin\Debug\net45\AWSSDK.Core.xml
+C:\Users\takashi\Documents\Visual Studio 2017\Projects\s3hash-net\aws-sdk-net-v3\sdk\src\Core\obj\Debug\net45\AWSSDK.Core.Net45.csprojResolveAssemblyReference.cache
+C:\Users\takashi\Documents\Visual Studio 2017\Projects\s3hash-net\aws-sdk-net-v3\sdk\src\Core\obj\Debug\net45\AWSSDK.Core.Net45.csproj.CoreCompileInputs.cache
+C:\Users\takashi\Documents\Visual Studio 2017\Projects\s3hash-net\aws-sdk-net-v3\sdk\src\Core\obj\Debug\net45\AWSSDK.Core.Net45.AssemblyInfoInputs.cache
+C:\Users\takashi\Documents\Visual Studio 2017\Projects\s3hash-net\aws-sdk-net-v3\sdk\src\Core\obj\Debug\net45\AWSSDK.Core.Net45.AssemblyInfo.cs
+C:\Users\takashi\Documents\Visual Studio 2017\Projects\s3hash-net\aws-sdk-net-v3\sdk\src\Core\obj\Debug\net45\AWSSDK.Core.dll
+C:\Users\takashi\Documents\Visual Studio 2017\Projects\s3hash-net\aws-sdk-net-v3\sdk\src\Core\obj\Debug\net45\AWSSDK.Core.xml
+C:\Users\takashi\Documents\Visual Studio 2017\Projects\s3hash-net\aws-sdk-net-v3\sdk\src\Core\obj\Debug\net45\AWSSDK.Core.pdb
