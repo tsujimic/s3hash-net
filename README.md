@@ -1,14 +1,14 @@
 # s3hash-net
 .net Compute Hash for S3
 
-## Setting the s3hash-net
+## Setting
 priority of credentials
 1. AwsS3Hash.Net45.exe --accesskey XXXXXXXX --secretkey YYYYYYY
 2. ~/.aws/credentials
 3. EC2 IAM Role
 
 ```
-# AwsS3Hash.Net45.exe --help
+## AwsS3Hash.Net45.exe --help
 Usage: AwsS3Hash.Net45 [options]
 
 Options:
@@ -24,7 +24,7 @@ Options:
   -l, --log=VALUE            log file.
   -?, --help                 show help.
 ```
-# Usage example
+## Usage example
 ```
 $ AwsS3Hash.Net45.exe --accesskey XXXXXXXX --secretkey YYYYYYY --path s3://bucket/key
 $ AwsS3Hash.Net45.exe -a XXXXXXXX -s YYYYYYY -p s3://bucket/key
